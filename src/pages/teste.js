@@ -63,12 +63,12 @@ export default function Teste() {
           const scrollPosition = self.scroll();
           const windowHeight = window.innerHeight;
           const pageIndex = Math.floor(
-            (scrollPosition + windowHeight / 2) / windowHeight / 15
+            (scrollPosition + windowHeight / 2) / windowHeight / 3
           );
           console.log(pageIndex);
           setCurrentPage(pageIndex);
         },
-        end: () => `+=${container.offsetHeight * (sections.length - 1) * 15}`,
+        end: () => `+=${container.offsetHeight * (sections.length - 1) * 3}`,
       },
     });
   }, []);
