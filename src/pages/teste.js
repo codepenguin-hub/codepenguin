@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../app/globals.css";
+import "../styles/globals.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";

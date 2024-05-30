@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font: "Barlow", sans-serif;
+  --font: "Poppins", sans-serif;
 }
 
 * {
@@ -12,15 +12,20 @@
   margin: 0;
 }
 
+/* Para navegadores com scrollbar padrão (Firefox, IE) */
+html {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
-  display: none; /* Esconde a barra de rolagem no Chrome e Safari */
 }
 
 a {
