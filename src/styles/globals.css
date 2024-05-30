@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Para navegadores com scrollbar padrão (Firefox, IE) */
 html {
   overflow: -moz-scrollbars-none;
@@ -26,6 +30,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 a {
