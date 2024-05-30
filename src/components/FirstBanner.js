@@ -6,7 +6,7 @@ export default function FirstBanner() {
   return (
     <section className="h-[100vh] width-[100%] bg-gradient-to-br from-[#7678ED] to-[white] flex items-center justify-center flex-col">
       <nav>
-        <Image src={whitePenguin} className="w-12" />
+        <Image src={whitePenguin} className="w-10" />
       </nav>
       <div className="flex items-center justify-center flex-col mt-10">
         <h1 className="text-4xl text-white font-light ">
