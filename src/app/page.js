@@ -1,7 +1,12 @@
 "use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import FirstBanner from "../components/FirstBanner.js";
+import Differences1 from "../components/Differences1.js";
+import Differences2 from "../components/Differences2.js";
+import Differences3 from "../components/Differences3.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,18 +78,10 @@ const Home = () => {
   return (
     <div className="relative">
       <div ref={containerRef} className="overflow-hidden relative h-[100vh]">
-        <section className="h-[100vh] width-[100%] bg-[#f9f9f9] flex items-center justify-center">
-          <h1>Panel 1</h1>
-        </section>
-        <section className="h-[100vh] width-[100%] flex items-center justify-center">
-          <h1>Panel 2</h1>
-        </section>
-        <section className="h-[100vh] width-[100%] bg-[#f9f9f9] flex items-center justify-center">
-          <h1>Panel 3</h1>
-        </section>
-        <section className="h-[100vh] width-[100%] flex items-center justify-center">
-          <h1>Panel 4</h1>
-        </section>
+        <FirstBanner />
+        <Differences1 />
+        <Differences2 />
+        <Differences3 />
         <section className="h-[100vh] width-[100%] bg-[#f9f9f9] flex items-center justify-center">
           <h1>Panel 5</h1>
         </section>
