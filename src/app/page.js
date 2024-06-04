@@ -2,50 +2,24 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import FirstBanner from "../components/FirstBanner.js";
-import Differences1 from "../components/Differences1.js";
-import Differences2 from "../components/Differences2.js";
-import Differences3 from "../components/Differences3.js";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+import FirstBanner from "../components/FirstBanner";
+import Differences1 from "../components/Differences1";
+import Differences2 from "../components/Differences2";
+import Differences3 from "../components/Differences3";
+import Header2 from "../components/Header2";
+import PageIndicator from "../components/PageIndicator";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const PageIndicator = ({ pageCount, currentPage }) => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const indicators = containerRef.current.querySelectorAll(".page-indicator");
-
-    gsap.to(indicators, {
-      duration: 0.5,
-      backgroundColor: (i) => (i === currentPage ? "#F18701" : "#E5E5E5"),
-    });
-  }, [currentPage]);
-
-  const indicators = Array.from({ length: pageCount }, (_, i) => (
-    <div
-      key={i}
-      className={`w-2 rounded-full mx-1 page-indicator ${
-        currentPage === i ? "bg-[#F18701] h-5" : "bg-[#E5E5E5] h-2"
-      }`}
-    />
-  ));
-
-  return (
-    <div ref={containerRef} className="flex flex-col gap-2">
-      {indicators}
-    </div>
-  );
-};
 
 const Home = () => {
   const containerRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
-  const [scrollTrigger, setScrollTrigger] = useState(null);
+  const previousPage = useRef(0);
 
   useEffect(() => {
     const sections = gsap.utils.toArray(containerRef.current.children);
-
     const trigger = gsap.to(sections, {
       yPercent: -100 * (sections.length - 1),
       ease: "none",
@@ -59,21 +33,22 @@ const Home = () => {
           ease: "power1.inOut",
         },
         onUpdate: (self) => {
-          const { scrollY, innerHeight } = window;
-          const pageIndex = Math.floor(
-            (scrollY + innerHeight / 2) / innerHeight / 3
-          );
-          setCurrentPage(pageIndex);
+          const newPage = Math.floor(self.progress * (sections.length - 1));
+          setCurrentPage(newPage);
         },
         end: () =>
-          `+=${containerRef.current.offsetHeight * (sections.length - 1) * 3}`,
+          `+=${containerRef.current.offsetHeight * (sections.length - 1)}`,
       },
     });
 
-    setScrollTrigger(trigger);
-
-    return () => trigger.kill(); // Limpa o ScrollTrigger ao desmontar
+    return () => {
+      trigger.kill();
+    };
   }, []);
+
+  useEffect(() => {
+    previousPage.current = currentPage;
+  }, [currentPage]);
 
   return (
     <div className="relative">
@@ -89,9 +64,18 @@ const Home = () => {
           <h1>Panel 6</h1>
         </section>
       </div>
-      <div className="fixed bottom-[50%] right-0 transform -translate-x-1/2">
-        <PageIndicator pageCount={6} currentPage={currentPage} />
-      </div>
+
+      {currentPage !== 0 && (
+        <div className="fixed bottom-[50%] right-0 transform -translate-x-1/2">
+          <PageIndicator pageCount={6} currentPage={currentPage} />
+        </div>
+      )}
+
+      <Header2
+        currentPage={currentPage}
+        previousPage={previousPage}
+        setCurrentPage={setCurrentPage}
+      />
     </div>
   );
 };
