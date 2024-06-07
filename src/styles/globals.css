@@ -3,37 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --font: "Poppins", sans-serif;
+	--font: "Poppins", sans-serif;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
+}
+
+/* Para navegadores com lucid mode ou detach button (Opera) */
+#detach-button-host {
+	display: none;
 }
 
 /* Para navegadores com scrollbar padrão (Firefox, IE) */
 html {
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
 }
 
 html::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  scrollbar-width: none;
+	max-width: 100vw;
+	overflow-x: hidden;
+	scrollbar-width: none;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
