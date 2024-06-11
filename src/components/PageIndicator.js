@@ -17,12 +17,15 @@ const Indicator = ({ pageCount, currentPage }) => {
       key={i}
       className={`w-2 rounded-full mx-1 page-indicator ${
         currentPage === i ? "bg-[#F18701] h-5" : "bg-[#E5E5E5] h-2"
-      }`}
+      } max-[800px]:hidden`}
     />
   ));
 
   return (
-    <div ref={containerRef} className="flex flex-col gap-2">
+    <div
+      ref={containerRef}
+      className="flex flex-col gap-2 max-[800px]:flex-row"
+    >
       {indicators}
     </div>
   );
