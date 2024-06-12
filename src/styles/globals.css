@@ -3,42 +3,97 @@
 @tailwind utilities;
 
 :root {
-	--font: "Poppins", sans-serif;
+  --font: "Poppins", sans-serif;
 }
 
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 ::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 /* Para navegadores com lucid mode ou detach button (Opera) */
 #detach-button-host {
-	display: none;
+  display: none;
 }
 
 /* Para navegadores com scrollbar padrão (Firefox, IE) */
 html {
-	overflow: -moz-scrollbars-none;
-	-ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
 }
 
 html::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 html,
 body {
-	max-width: 100vw;
-	overflow-x: hidden;
-	scrollbar-width: none;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+.input-container {
+  position: relative;
+}
+
+.input-container label {
+  position: absolute;
+  left: 10px;
+  top: 14px;
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  background-color: #f3f4f6;
+  padding: 0 4px;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label,
+.input-container textarea:focus + label,
+.input-container textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  color: #7678ed;
+  font-size: 12px;
+}
+
+.input-container .required {
+  color: red;
+  margin-left: 4px;
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  border: 2px solid #ccc;
+
+  background: #f3f4f6;
+  font-size: 16px;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+  outline: none;
+  border-color: #7678ed;
+}
+
+.input-container input.border-red-500,
+.input-container textarea.border-red-500 {
+  border-color: red;
+}
+
+.input-container input::placeholder,
+.input-container textarea::placeholder {
+  color: transparent;
 }
