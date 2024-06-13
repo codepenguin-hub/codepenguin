@@ -127,7 +127,7 @@ const Home = () => {
             key={3}
             upperTitle={false}
             img={img3Services}
-            title={<h1 className="text-white text-2xl ">Site Potfólio</h1>}
+            title={<h1 className="text-white text-2xl ">Site Portfólio</h1>}
             txt1={
               <p className="text-white mt-[-6px]">
                 <b>Showcase de trabalhos:</b> Destaca uma seleção dos melhores
