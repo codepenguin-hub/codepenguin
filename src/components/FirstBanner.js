@@ -60,7 +60,7 @@ export default function FirstBanner() {
 
   return (
     <section className="h-screen width-screen flex items-center justify-center flex-col bg-[#F3F4F6]">
-      <div className="p-[10px] w-full h-full absolute z-[-1]">
+      <div className="p-[25px] w-full h-full absolute z-[-1]">
         <Image
           src="/images/background.jpg"
           width={0}

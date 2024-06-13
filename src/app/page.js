@@ -35,7 +35,7 @@ const Home = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         pin: true,
-        scrub: 0.8,
+        scrub: 0.5,
         snap: {
           snapTo: 1 / (sections.length - 1),
           duration: 0.1,
