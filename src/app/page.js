@@ -4,6 +4,8 @@ import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Spline from "@splinetool/react-spline";
+
 import { Icon } from "@iconify/react";
 import Image from "next/image"; // Importando o componente Image do Next.js
 import FirstBanner from "../components/FirstBanner";
@@ -33,7 +35,7 @@ const Home = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         pin: true,
-        scrub: 0.5,
+        scrub: 0.8,
         snap: {
           snapTo: 1 / (sections.length - 1),
           duration: 0.1,
@@ -125,7 +127,7 @@ const Home = () => {
             key={3}
             upperTitle={false}
             img={img3Services}
-            title={<h1 className="text-white text-2xl ">Site Potfólio</h1>}
+            title={<h1 className="text-white text-2xl ">Site Portfólio</h1>}
             txt1={
               <p className="text-white mt-[-6px]">
                 <b>Showcase de trabalhos:</b> Destaca uma seleção dos melhores
@@ -173,28 +175,17 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="fixed bottom-0 right-0 p-4 bg-[#F18701] text-slate-50 rounded-tl-2xl max-[1024px]:hidden">
-        <Link href="/contato" className="flex flex-row items-center gap-3">
-          <div className="w-[1.875rem] h-[1.875rem]">
-            <Icon
-              icon="line-md:phone-call-twotone-loop"
-              className="text-white text-3xl"
-            />
-          </div>
-          Entre em contato
-        </Link>
-      </div>
 
-      <div className="fixed bottom-0 right-0 p-4 bg-[#F18701] text-slate-50 rounded-tl-2xl min-[1024px]:hidden">
-        <Link href="/contato" className="flex flex-row items-center gap-3">
+      <Link href="/contato" className="flex flex-row items-center gap-3">
+        <div className="fixed bottom-3 right-3 p-4 bg-[#F18701] text-slate-50 rounded-full">
           <div className="w-[1.875rem] h-[1.875rem]">
             <Icon
               icon="line-md:phone-call-twotone-loop"
               className="text-white text-3xl"
             />
           </div>
-        </Link>
-      </div>
+        </div>
+      </Link>
 
       {currentPage !== 0 && (
         <div className="fixed bottom-[50%] right-0 transform -translate-x-1/2 ">

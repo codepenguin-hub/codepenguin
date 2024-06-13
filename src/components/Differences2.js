@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import DifferencesVideo from "./DifferencesVideo";
 
 export default function Differences2() {
+
 	return (
 		<section className="h-[100vh] width-[100%]  flex justify-center items-center  flex-col bg-[#fafafa]">
 			<div className="flex justify-center items-center w-[75%] m-12 max-[1024px]:flex-col-reverse max-[1024px]:w-full max-[1024px]:gap-10">
