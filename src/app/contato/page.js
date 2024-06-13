@@ -96,7 +96,7 @@ const Home = () => {
   };
 
   return (
-    <div className="h-[100vh] bg-[#F3F4F6] max-[1024px]:h-full">
+    <div className="h-[100vh] bg-[#F3F4F6] max-[1024px]:h-full ">
       <ToastContainer />
       <Header />
       <section className=" flex justify-center items-start flex-row gap-[10rem] max-[1024px]:gap-[5rem] pt-[2rem] self-center max-[1024px]:flex-col max-[1024px]:items-center ">
@@ -107,7 +107,7 @@ const Home = () => {
           </h1>
           <div className="flex flex-col gap-6">
             <div className="flex flex-row items-center gap-6">
-              <div className="w-[2rem] bg-white h-[2rem] rounded-full px-2 py-2">
+              <div className="w-[3rem] bg-white h-[3rem] rounded-full flex items-center justify-center">
                 <Icon
                   icon="line-md:phone-twotone"
                   className="text-[#F18701] text-3xl"
@@ -115,11 +115,11 @@ const Home = () => {
               </div>
               <div>
                 <p className="text-[#262625] font-light">Telefone:</p>
-                <p className="text-[#262625]">(62)4002-8922</p>
+                <p className="text-[#262625]">+55 (62) 99614-1741</p>
               </div>
             </div>
             <div className="flex flex-row items-center gap-6">
-              <div className="w-[2rem] bg-white h-[2rem] rounded-full px-2 py-2">
+              <div className="w-[3rem] bg-white h-[3rem] rounded-full flex items-center justify-center">
                 <Icon
                   icon="line-md:email-twotone"
                   className="text-[#F18701] text-3xl"
@@ -131,7 +131,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex flex-row items-center gap-6">
-              <div className="w-[2rem] bg-white h-[2rem] rounded-full px-2 py-2">
+              <div className="w-[3rem] bg-white h-[3rem] rounded-full flex items-center justify-center">
                 <Icon
                   icon="line-md:my-location"
                   className="text-[#F18701] text-3xl"
@@ -204,7 +204,7 @@ const Home = () => {
           </div>
           <div className="input-container">
             <input
-              type="text"
+              type="email"
               className={`border-2 rounded-lg py-3 px-4 bg-[#F3F4F6] ${
                 errors.email ? "border-red-500" : "border-slate-300"
               }`}

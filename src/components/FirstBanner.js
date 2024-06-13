@@ -58,7 +58,7 @@ export default function FirstBanner() {
   const [images, setImages] = useState(handleSetImages(initialCenterIndex));
 
   return (
-    <section className="h-[100vh] width-[100%] flex items-center justify-center flex-col">
+    <section className="h-[100vh] width-[100%] flex items-center justify-center flex-col bg-sky-300">
       <nav>
         <Image src={whitePenguin} className="w-10" alt="image" priority />
       </nav>

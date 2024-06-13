@@ -12,7 +12,7 @@ export default function Services({
   txt3,
 }) {
   return (
-    <section className="h-[100vh] width-[100%] bg-[#fafafa]  flex justify-center items-center flex-col">
+    <section className="h-[100vh] width-[100%] bg-[#fafafa]  flex justify-center items-center flex-col border-dashed border-2 border-b-[#eeeeee4d]">
       {upperTitle == true ? (
         <div className="flex items-center justify-center flex-col mt-8 max-[650px]:mt-12">
           <h1 className="text-3xl font-regular bg-clip-text  text-[#262625] text-center leading-normal">
@@ -21,9 +21,9 @@ export default function Services({
           </h1>
         </div>
       ) : null}
-      <div className="flex justify-center  m-12 gap-[5rem] items-center w-[65%] max-[650px]:w-[85%] ">
+      <div className="flex justify-center m-12 gap-[5rem] items-center w-[65%] max-[650px]:w-[85%] bg">
         <div
-          className={`bg-gradient-to-br from-[#8333b53b] to-[#7678ed7c] flex flex-row rounded-3xl gap-[3rem] px-10 border-2 border-slate-50 overflow-hidden shadow-lg shadow-slate-300 backdrop-blur-md max-[1024px]:flex-col max-[1024px]:w-[75%] max-[1024px]:gap-10 max-[650px]:w-full `}
+          className={`bg-gradient-to-br from-[#8333b53b] to-[#7678ed7c] flex flex-row rounded-3xl gap-[3rem] px-10 border-2 border-slate-50 overflow-hidden shadow-lg shadow-slate-300 backdrop-blur-md max-[1024px]:flex-col max-[1024px]:w-[75%] max-[1024px]:gap-10 max-[650px]:w-full`}
         >
           <Image
             src={img}

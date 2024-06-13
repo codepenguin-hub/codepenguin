@@ -4,7 +4,7 @@ import DifferencesVideo from "./DifferencesVideo";
 
 export default function Differences2() {
   return (
-    <section className="h-[100vh] width-[100%]  flex justify-center items-center  flex-col bg-[#F3F4F6]">
+    <section className="h-[100vh] width-[100%]  flex justify-center items-center  flex-col bg-[#F3F4F6] border-dashed border-2 border-b-[#c4c4c4cc]">
       <div className="flex justify-center items-center w-[75%] m-12 max-[1024px]:flex-col-reverse max-[1024px]:w-full max-[1024px]:gap-10">
         <DifferencesVideo src="/videos/project-example-math-left.webm" />
         <div className="flex justify-center w-[50%] max-[1024px]:w-[80%] ">
