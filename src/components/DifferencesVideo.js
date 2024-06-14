@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 const isProd = process.env.NODE_ENV === "production";
 
-const basePath = isProd ? "/codepenguin" : "";
+const basePath = "/codepenguin";
 
 export default function DifferencesVideo({ src, type }) {
 	const video = useRef(null);
