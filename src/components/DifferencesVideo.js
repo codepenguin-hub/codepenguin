@@ -1,8 +1,5 @@
 import { useEffect, useRef } from "react";
-
-const isProd = process.env.NODE_ENV === "production";
-
-const basePath = "/codepenguin";
+const config = require("../../next.config.mjs");
 
 export default function DifferencesVideo({ src, type }) {
 	const video = useRef(null);
@@ -34,7 +31,7 @@ export default function DifferencesVideo({ src, type }) {
 			playsInline
 			className="max-[1024px]:w-[25rem] max-[650px]:w-[20rem]"
 		>
-			<source src={basePath + src} type={type} />
+			<source src={config.default.basePath + src} type={type} />
 		</video>
 	);
 }
