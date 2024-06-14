@@ -6,7 +6,10 @@ export default function Differences2() {
 	return (
 		<section className="h-[100vh] width-[100%]  flex justify-center items-center  flex-col bg-[#F3F4F6]">
 			<div className="flex justify-center items-center w-[75%] m-12 max-[1024px]:flex-col-reverse max-[1024px]:w-full max-[1024px]:gap-10">
-				<DifferencesVideo src="/videos/project-example-car.mp4" />
+				<DifferencesVideo
+					src="/videos/project-example-car.mp4"
+					type="video/mp4"
+				/>
 				<div className="flex justify-center w-[50%] max-[1024px]:w-[80%] ">
 					<div className="flex gap-3 flex-col ml-8">
 						<CustomImage

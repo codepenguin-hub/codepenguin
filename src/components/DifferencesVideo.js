@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
 
-const config = require("../../next.config.mjs");
+const isProd = process.env.NODE_ENV === "production";
 
-export default function DifferencesVideo({ src }) {
+const basePath = isProd ? "/codepenguin" : "";
+
+export default function DifferencesVideo({ src, type }) {
 	const video = useRef(null);
 
 	function restartVideo() {
@@ -32,7 +34,7 @@ export default function DifferencesVideo({ src }) {
 			playsInline
 			className="max-[1024px]:w-[25rem] max-[650px]:w-[20rem]"
 		>
-			<source src={config.default.basePath + src} type="video/webm" />
+			<source src={basePath + src} type={type} />
 		</video>
 	);
 }

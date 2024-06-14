@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-const config = require("../../next.config.mjs");
+const isProd = process.env.NODE_ENV === "production";
+
+const basePath = isProd ? "/codepenguin" : "";
 
 export default React.forwardRef((props, ref) => {
-	return (
-		<Image src={config.default.basePath + props.src} {...props} ref={ref} />
-	);
+	return <Image src={basePath + props.src} {...props} ref={ref} />;
 });
