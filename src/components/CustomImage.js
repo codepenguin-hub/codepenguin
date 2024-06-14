@@ -3,6 +3,8 @@ import React from "react";
 
 const config = require("../../next.config.mjs");
 
-export default (props) => {
-	return <Image src={config.basePath + props.src} {...props} />;
-};
+export default React.forwardRef((props, ref) => {
+	return (
+		<Image src={config.default.basePath + props.src} {...props} ref={ref} />
+	);
+});
