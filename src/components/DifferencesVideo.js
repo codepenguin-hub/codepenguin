@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 
+const config = require("../../next.config.mjs");
+
 export default function DifferencesVideo({ src }) {
 	const video = useRef(null);
 
@@ -30,7 +32,7 @@ export default function DifferencesVideo({ src }) {
 			playsInline
 			className="max-[1024px]:w-[25rem] max-[650px]:w-[20rem]"
 		>
-			<source src={src} type="video/webm" />
+			<source src={config.default.basePath + src} type="video/webm" />
 		</video>
 	);
 }

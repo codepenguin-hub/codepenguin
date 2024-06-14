@@ -24,12 +24,17 @@ export default function FirstBanner() {
 			</div>
 
 			<nav className="select-none">
-				<CustomImage
-					src={whitePenguin}
-					className="w-10 absolute top-12 right-1/2 translate-x-1/2 "
-					alt="Imagem minimalista de monotonalidade de um pinguim na cor branca, logo da CodePenguin."
-					priority
-				/>
+				<div className="absolute w-10 top-12 right-1/2 translate-x-1/2 ">
+					<CustomImage
+						src="/images/whitePenguin.png"
+						sizes="100%"
+						width={0}
+						height={0}
+						className="w-full h-[auto] object-contain"
+						alt="Imagem minimalista de monotonalidade de um pinguim na cor branca, logo da CodePenguin."
+						priority
+					/>
+				</div>
 			</nav>
 			<div className="flex items-center justify-center flex-col mt-5 mb-7">
 				<h1 className="text-4xl text-white font-extralight mb-1 max-[750px]:w-text-center max-[750px]:text-3xl">
