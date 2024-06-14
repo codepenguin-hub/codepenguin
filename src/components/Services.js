@@ -32,11 +32,10 @@ export default function Services({
 					<div className="w-[40%] max-[1024px]:hidden relative">
 						<CustomImage
 							src={img}
-							fill
 							sizes="100%"
 							width={0}
 							height={0}
-							style={{ objectFit: "contain" }}
+							style={{ objectFit: "contain", width: "100%" }}
 							alt="image"
 						/>
 					</div>
