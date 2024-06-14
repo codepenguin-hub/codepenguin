@@ -3,31 +3,31 @@ import CustomImage from "./CustomImage";
 
 const imageArray = [
 	{
-		src: "/images/site1.png",
+		path: "./images/site1.png",
 		alt: "Exemplo de um site para Clínicas, minimalista, com cores claras para o fundo e os elementos e cores escuras (como o azul) para destacar textos e elementos que podem ser interagidos.",
 	},
 	{
-		src: "/images/site2.png",
+		path: "./images/site2.png",
 		alt: "Exemplo de um site de aluguel de Carros, minimalista, com tons de cinza para o fundo e o objeto abstrato, e branco para os textos, além de detacar partes com o vermelho que também se predomina no carro em destaque.",
 	},
 	{
-		src: "/images/site3.png",
+		path: "./images/site3.png",
 		alt: "Exemplo de um site portfolio com um fundo preto cheio de estrelas (como no espaço) e um texto ao centro 'O UNIVERSO DO DESENVOLVIMENTO WEB' e abaixo 'UMA JORNADA DE CONHECIMENTO E CRIATIVIDADE'",
 	},
 	{
-		src: "/images/site4.png",
+		path: "./images/site4.png",
 		alt: "Exemplo de um site de revendedora de carros onde, o mesmo contém predominantemente as cores azul escuro e branco que se alternam para formar os componentes, em certos pontos o branco é destaque e o azul é fundo e vice versa, na imagem tabém é possível visualizar um carro em destaque.",
 	},
 	{
-		src: "/images/site5.png",
+		path: "./images/site5.png",
 		alt: "Exemplo de um site de um advogado com uma foto do mesmo em destaque e ao lado as principais informações. O site contém tons de cinza predominantemente, alternando-se entre branco para fundo e cinza para destaque e vice versa.",
 	},
 	{
-		src: "/images/site6.png",
+		path: "./images/site6.png",
 		alt: "Exemplo de um site para supermercados, ao centro há um carrossel com alguns destaques. O site contém a cor roxa para destacar certos pontos e preto para o texto em geral, seu fundo é branco e existe outro fundo abstrato para destacar o carrossel.",
 	},
 	{
-		src: "/images/site7.png",
+		path: "./images/site7.png",
 		alt: "Exemplo de um site para orçamento de computadores, no fundo há um tom de roxo que varia em certos pontos, e formas abstratas que diminuem a monotonia da cor, ao centro há um computador branco e ao lado deste um texto com uma call to action para o orçamento. ",
 	},
 ];
@@ -180,7 +180,7 @@ export default () => {
 						<CustomImage
 							sizes="100%"
 							fill
-							src={image.src}
+							path={image.path}
 							quality={100}
 							className="rounded-xl border-solid border-slate-50 border-4 object-cover"
 							draggable={false}

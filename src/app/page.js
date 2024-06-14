@@ -76,7 +76,7 @@ const Home = () => {
 						color1={`#7678ed51`}
 						color2={`#7678ed7c`}
 						upperTitle={true}
-						img="/images/img1Services.png"
+						img="./images/img1Services.png"
 						title={
 							<h1 className="text-white text-2xl ">
 								Landing Page
@@ -109,7 +109,7 @@ const Home = () => {
 					<Services
 						key={2}
 						upperTitle={false}
-						img="/images/img2Services.png"
+						img="./images/img2Services.png"
 						title={
 							<h1 className="text-white text-2xl ">Site Start</h1>
 						}
@@ -139,7 +139,7 @@ const Home = () => {
 					<Services
 						key={3}
 						upperTitle={false}
-						img="/images/img3Services.png"
+						img="./images/img3Services.png"
 						title={
 							<h1 className="text-white text-2xl ">
 								Site Portfólio
@@ -170,7 +170,7 @@ const Home = () => {
 					/>
 					<Services
 						upperTitle={false}
-						img="/images/img4Services.png"
+						img="./images/img4Services.png"
 						title={
 							<h1 className="text-white text-2xl ">
 								Site Catálogo
