@@ -11,10 +11,6 @@ import Differences1 from "../components/Differences1";
 import Differences2 from "../components/Differences2";
 import Differences3 from "../components/Differences3";
 import Services from "../components/Services";
-import img1Services from "../../public/images/img1Services.png";
-import img2Services from "../../public/images/img2Services.png";
-import img3Services from "../../public/images/img3Services.png";
-import img4Services from "../../public/images/img4Services.png";
 import Header from "../components/Header";
 import PageIndicator from "../components/PageIndicator";
 
@@ -77,7 +73,7 @@ const Home = () => {
 						color1={`#7678ed51`}
 						color2={`#7678ed7c`}
 						upperTitle={true}
-						img={img1Services}
+						img="/images/img1Services.png"
 						title={
 							<h1 className="text-white text-2xl ">
 								Landing Page
@@ -110,7 +106,7 @@ const Home = () => {
 					<Services
 						key={2}
 						upperTitle={false}
-						img={img2Services}
+						img="/images/img2Services.png"
 						title={
 							<h1 className="text-white text-2xl ">Site Start</h1>
 						}
@@ -140,7 +136,7 @@ const Home = () => {
 					<Services
 						key={3}
 						upperTitle={false}
-						img={img3Services}
+						img="/images/img3Services.png"
 						title={
 							<h1 className="text-white text-2xl ">
 								Site Portfólio
@@ -171,7 +167,7 @@ const Home = () => {
 					/>
 					<Services
 						upperTitle={false}
-						img={img4Services}
+						img="/images/img4Services.png"
 						title={
 							<h1 className="text-white text-2xl ">
 								Site Catálogo
