@@ -9,7 +9,7 @@ export default function Differences3() {
 				<div className="flex justify-center w-[50%] max-[1024px]:w-[70%]  ">
 					<div className="flex gap-3 flex-col ">
 						<CustomImage
-							src="/images/decoration3.png"
+							path="./images/decoration3.png"
 							width={0}
 							height={0}
 							sizes="100vw"

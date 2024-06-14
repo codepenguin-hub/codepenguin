@@ -6,7 +6,7 @@ export default function FirstBanner() {
 		<section className="h-screen width-screen flex items-center justify-center flex-col bg-[#F3F4F6]">
 			<div className="p-[25px] w-full h-full absolute z-[-1]">
 				<CustomImage
-					src="/images/background.jpg"
+					path="./images/background.jpg"
 					width={0}
 					height={0}
 					sizes="100vw"
@@ -25,7 +25,7 @@ export default function FirstBanner() {
 			<nav className="select-none">
 				<div className="absolute w-10 top-12 right-1/2 translate-x-1/2 ">
 					<CustomImage
-						src="/images/whitePenguin.png"
+						path="./images/whitePenguin.png"
 						sizes="100%"
 						width={0}
 						height={0}
@@ -49,7 +49,7 @@ export default function FirstBanner() {
 			<div className="absolute bottom-[25px] animate-bounce w-[40px] h-[40px] pointer-events-none select-none">
 				<div className="flex flex-col justify-center items-center">
 					<CustomImage
-						src="/images/arrow-down.svg"
+						path="./images/arrow-down.svg"
 						width={50}
 						height={65}
 						sizes={"100vw"}

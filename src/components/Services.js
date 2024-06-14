@@ -30,7 +30,7 @@ export default function Services({
 				>
 					<div className="w-[40%] max-[1024px]:hidden relative">
 						<CustomImage
-							src={img}
+							path={img}
 							sizes="100%"
 							width={0}
 							height={0}

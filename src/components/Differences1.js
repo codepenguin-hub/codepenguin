@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Icon } from "@iconify/react";
 import DifferencesVideo from "./DifferencesVideo";
+import CustomImage from "./CustomImage";
 
 export default function Differences1() {
 	return (
@@ -8,8 +8,8 @@ export default function Differences1() {
 			<div className="flex justify-center items-center w-[75%] m-12 max-[1024px]:flex-col max-[1024px]:w-full max-[1024px]:gap-10 ">
 				<div className="flex justify-center w-[50%] max-[1024px]:w-[70%]  ">
 					<div className="flex gap-3 flex-col ">
-						<Image
-							src="/images/decoration1.png"
+						<CustomImage
+							path="./images/decoration1.png"
 							width={0}
 							height={0}
 							sizes="100vw"
