@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Icon } from "@iconify/react";
 import CustomImage from "./CustomImage";
 
