@@ -49,10 +49,10 @@ export default function Header({ currentPage, previousPage }) {
   }, [currentPage, previousPage]);
 
   return (
-    <div className="fixed top-12 left-8 max-[1025px]:top-8 ">
+    <div className="fixed top-12 left-8 max-[1024px]:top-8 ">
       <Link href="/">
         <CustomImage
-          src="/images/defaultPenguin.png"
+          src="./images/defaultPenguin.png"
           alt="Imagem do logotipo da CodePenguin, um pinguim minimalista com a cor preta no seu corpo e laranja em suas patas e no seu bico."
           width={0}
           height={0}
