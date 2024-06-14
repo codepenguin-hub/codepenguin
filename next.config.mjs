@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
 	basePath: isProd ? "/codepenguin" : "",
-	output: "export",
+	output: isProd ? "export" : "standalone",
 };
 
 export default nextConfig;

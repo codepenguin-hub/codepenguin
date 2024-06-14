@@ -1,12 +1,12 @@
-import Image from "next/image";
 import whitePenguin from "../../public/images/whitePenguin.png";
 import ImagesCarousel from "./ImagesCarousel";
+import CustomImage from "./CustomImage";
 
 export default function FirstBanner() {
 	return (
 		<section className="h-screen width-screen flex items-center justify-center flex-col bg-[#F3F4F6]">
 			<div className="p-[25px] w-full h-full absolute z-[-1]">
-				<Image
+				<CustomImage
 					src="/images/background.jpg"
 					width={0}
 					height={0}
@@ -24,7 +24,7 @@ export default function FirstBanner() {
 			</div>
 
 			<nav className="select-none">
-				<Image
+				<CustomImage
 					src={whitePenguin}
 					className="w-10 absolute top-12 right-1/2 translate-x-1/2 "
 					alt="Imagem minimalista de monotonalidade de um pinguim na cor branca, logo da CodePenguin."
@@ -44,7 +44,7 @@ export default function FirstBanner() {
 			<ImagesCarousel />
 			<div className="absolute bottom-[25px] animate-bounce w-[40px] h-[40px] pointer-events-none select-none">
 				<div className="flex flex-col justify-center items-center">
-					<Image
+					<CustomImage
 						src="/images/arrow-down.svg"
 						width={50}
 						height={65}

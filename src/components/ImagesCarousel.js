@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import CustomImage from "./CustomImage";
 
 const imageArray = [
 	{
@@ -177,7 +177,7 @@ export default () => {
 						}}
 						style={image.style}
 					>
-						<Image
+						<CustomImage
 							sizes="100%"
 							fill
 							src={image.src}
