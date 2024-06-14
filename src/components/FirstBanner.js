@@ -1,4 +1,3 @@
-import whitePenguin from "../../public/images/whitePenguin.png";
 import ImagesCarousel from "./ImagesCarousel";
 import CustomImage from "./CustomImage";
 

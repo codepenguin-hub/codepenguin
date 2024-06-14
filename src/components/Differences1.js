@@ -49,7 +49,10 @@ export default function Differences1() {
 						</div>
 					</div>
 				</div>
-				<DifferencesVideo src="/videos/project-example-math.webm" />
+				<DifferencesVideo
+					src="/videos/project-example-math.webm"
+					type="video/webm"
+				/>
 			</div>
 		</section>
 	);

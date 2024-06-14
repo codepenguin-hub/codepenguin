@@ -51,7 +51,10 @@ export default function Differences3() {
 						</div>
 					</div>
 				</div>
-				<DifferencesVideo src="/videos/project-example-clinic.mp4" />
+				<DifferencesVideo
+					src="/videos/project-example-clinic.mp4"
+					type="video/mp4"
+				/>
 			</div>
 		</section>
 	);
